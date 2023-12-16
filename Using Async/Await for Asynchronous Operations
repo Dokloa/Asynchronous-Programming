@@ -1,0 +1,21 @@
+using System;
+using System.Threading.Tasks;
+
+class Program
+{
+    static async Task Main()
+    {
+        await CountAsync();
+    }
+
+    static async Task CountAsync()
+    {
+        Console.WriteLine("Start counting...");
+        for (int i = 1; i <= 5; i++)
+        {
+            await Task.Delay(1000); // Pause for 1 second asynchronously
+            Console.WriteLine(i);
+        }
+        Console.WriteLine("Counting finished!");
+    }
+}
